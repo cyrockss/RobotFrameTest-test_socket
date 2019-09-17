@@ -1,5 +1,5 @@
 *** Settings ***
-Library           ../../RobotFrameTest-common/SocketLib/MySocket.py    WITH NAME    MySocket
+Library           ../../RobotFrameTest-common/SocketLib/MySocket.py
 
 *** Keywords ***
 建立Socket连接
@@ -7,4 +7,5 @@ Library           ../../RobotFrameTest-common/SocketLib/MySocket.py    WITH NAME
     [Documentation]    通过IP和port建立TCP连接
     log    服务器IP:${server_ip}
     log    服务器端口:${server_port}
-    ${res}    Connect Server    ${server_ip}    ${server_port}
+    ${res}    Connet Server    ${server_ip}    ${server_port}
+    [Return]    ${res}
